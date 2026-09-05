@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Henny+Penny&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <figure>
+            <img id="ocean" src="image.jpg">
+            <figcaption>
+                Photo by <a href="https://unsplash.com/@silasbaisch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Silas Baisch</a> on <a href="https://unsplash.com/photos/blue-and-clear-body-of-water-K785Da4A_JA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </figcaption>
+        </figure>
+        <div class="circle"></div>
+        <img id="logo" src="logo.png" height="300" width="300">
+
+        <div id="content">
+            <p id="description">
+                Join the Deepest Escape from mundanity.
+            </p>
+            <h1>Escape!</h1>
+            <div id="form-field">
+                <div class="name-field">
+                    <div class="field">
+                        <label for="first-name">First name</label>
+                        <input type="text" 
+                                id="first-name" 
+                                name="first_name" 
+                                required 
+                                pattern="[a-zA-Z]*" 
+                                placeholder="Jane"
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="last-name">Last name</label>
+                        <input type="text" 
+                                id="last-name" 
+                                name="last_name" 
+                                required 
+                                pattern="[a-zA-Z]*" 
+                                placeholder="Doe"
+                        />
+                    </div>
+                </div>
+                <div class="contact-field">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" 
+                                id="email" 
+                                name="user_email" 
+                                required 
+                                placeholder="example@gmail.com"
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="mobile">Mobile</label>
+                        <input type="tel" 
+                                id="mobile" 
+                                name="user_mobile" 
+                                required 
+                                placeholder="01234567"
+                        />
+                    </div>
+                </div>
+                <div class="password-field">
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input type="password" 
+                                id="password" 
+                                name="user_password" 
+                                required 
+                                pattern="[0-9a-zA-Z]{6,10}"
+                                placeholder="example123" 
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="confirm">Confirm password</label>
+                        <input type="password" 
+                                id="confirm" 
+                                name="confirm_password" 
+                                required 
+                                placeholder="example123"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit">Create Account</button>
+            </div>
+            <p id="footer">Already have an account?<a href="login.com"> Log in</a></p>
+
+            <script>
+                const pass = document.getElementById("password");
+                const confirm = document.getElementById("confirm");
+
+                confirm.addEventListener("input", function () {
+                    if (confirm.value !== pass.value) {
+                        confirm.setCustomValidity("Passwords do not match");
+                    } else {
+                        confirm.setCustomValidity("");
+                    }
+                });
+            </script>
+        </div>
+    </form>
+</body>
+</html>

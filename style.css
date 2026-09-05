@@ -1,0 +1,217 @@
+
+body {
+    font-family: "Alkatra", sans-serif;
+    font-size: 1em;
+    font-style: normal;
+    background: rgb(223, 239, 254);
+}
+
+form {
+    position: relative;
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#ocean {
+    width: 30vw;
+    height: 100vh;
+}
+
+figure {
+    position: absolute;
+    left: 3%;
+    transform: translateX(-3%);
+    margin: 0;
+    width: 30vw;
+    height: 100vh;
+}
+
+figcaption {
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, -98%);
+    margin: 0;
+    color: white;
+    font-size: 0.8em;
+}
+
+.circle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    background: rgb(255, 255, 255);
+    opacity: 20%;
+    top: 38%;
+    left: 12%;
+    transform: translate(-12%, -38%);
+}
+
+#logo {
+    position: absolute;
+    top: 40%;
+    left: 12.5%;
+    transform: translate(-12.5%, -40%);
+    width: 250px;
+    height: 250px;
+}
+
+#content {
+    color: black;
+    background: rgb(252, 250, 250);
+    position: absolute;
+    left: 60vw;
+    height: 100vh;
+    transform: translateX(-60%);
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 40vw;
+}
+
+.field label {
+    display: block;
+}
+
+#form-field {
+    background: white;
+    box-shadow: 0 5px 10px lightslategray;
+}
+
+.field input {
+    display: block;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+.password-field {
+    padding-bottom: 5%;
+}
+
+.name-field,
+.contact-field,
+.password-field {
+    display: flex;
+    gap: 5%;
+    padding-left: 5%;
+}
+
+.name-field {
+    padding-top: 20px;
+}
+
+button {
+    background: rgb(132, 172, 206);
+    padding: 5px 20px 5px 20px;
+    font: bold 1em black;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 7%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    box-shadow: 0 4px 8px lightslategray;
+}
+
+h1, p {
+    padding-left: 5%;
+}
+
+#description {
+    margin-top: 25%;
+    font-size: 1.5em;
+}
+
+h1 {
+    text-shadow: 0 4px 8px lightslategray;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+@media (max-width: 1000px) {
+    form {
+        width: 100vw;
+        height: 70vh;
+    }
+
+    #ocean {
+        width: 30vw;
+        height: 70vh;
+    }
+
+    figure {
+        height: 70vh;
+        width: 30vw;
+        top: 15vh;
+        left: 0;
+        transform: translateX(-0%);
+    }
+
+    figcaption {
+        font-size: 0.3em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .circle {
+        width: clamp(50px, 150px, 250px);
+        height: clamp(50px, 150px, 250px);
+        border-radius: 50%;
+        left: 4vw;
+        top: 43vh;
+        transform: translate(-4%, -43%);
+    }
+
+    #logo {
+        width: clamp(50px, 150px, 250px);
+        height: auto;
+        left: 4vw;
+        top: 43vh;
+        transform: translate(-4%, -43%);
+    }
+
+    #content {
+        left: 50%;
+        top: 15vh;
+        width: 60%;
+        height: 70vh;
+        left: 100vw;
+        transform: translateX(-100%);
+    }
+
+    button {
+        margin-top: 5%;
+        margin-left: 2%;
+        margin-bottom: 3%;
+    }
+
+    h1, p {
+        padding-left: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    #description {
+        margin-top: 15%;
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
